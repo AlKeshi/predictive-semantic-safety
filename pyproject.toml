@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "predictive-semantic-safety"
+version = "0.3.0"
+authors = [{name = "Salem Fradi"}, {name = "Yanning Dai"}]
+description = "Visual physical forecasting and backup-CBF control for MuJoCo Go1 navigation"
+readme = "README.md"
+license = "MIT AND Apache-2.0 AND BSD-3-Clause"
+license-files = ["LICENSE", "pss/sim/mujoco/assets/go1/LICENSE.*", "pss/sim/mujoco/assets/go1/NOTICE.md"]
+requires-python = ">=3.10,<3.12"
+dependencies = [
+  "numpy==1.26.4", "scipy==1.15.3", "osqp==1.1.3",
+  "mujoco==3.8.1", "onnxruntime==1.22.1", "Pillow==11.2.1",
+  "imageio==2.37.0", "imageio-ffmpeg==0.6.0", "matplotlib>=3.8,<4"
+]
+
+[project.optional-dependencies]
+code-world = [
+  "torch==2.7.1",
+  "torchvision==0.22.1",
+  "transformers==5.11.0",
+  "accelerate==1.14.0",
+  "qwen-vl-utils==0.0.14",
+  "lm-format-enforcer==0.11.3",
+]
+code-world-fast = [
+  "predictive-semantic-safety[code-world]",
+  "flash-linear-attention==0.4.2",
+  "fla-core==0.4.2",
+  "causal-conv1d==1.5.3.post1",
+  "einops==0.8.1",
+  "xgrammar==0.1.29",
+  "jsonschema>=4.23,<5",
+]
+omnivla = [
+  "torch==2.2.0",
+  "torchvision==0.17.0",
+  "transformers @ git+https://github.com/moojink/transformers-openvla-oft.git@bc339d9ad707454c0c115970db43c260067c61ab",
+  "timm==0.9.10",
+  "accelerate>=0.30,<1",
+  "huggingface-hub>=0.23,<1",
+  "peft==0.11.1",
+  "draccus==0.8.0",
+  "einops>=0.7",
+  "sentencepiece==0.1.99",
+  "rich",
+  "json-numpy",
+  "jsonlines",
+  "protobuf",
+  "wandb",
+  "dlimp @ git+https://github.com/moojink/dlimp_openvla.git@040105d256bd28866cc6620621a3d5f7b6b91b46",
+  "tensorflow==2.15.0",
+  "tensorflow-datasets==4.9.3",
+  "tensorflow-metadata==1.14.0",
+  "tensorflow-graphics==2021.12.3",
+  "tensorflow-probability==0.23.0",
+]
+dev = ["pytest>=8,<9", "ruff==0.11.2", "build"]
+
+[dependency-groups]
+gpu = ["vllm==0.19.1", "transformers==5.11.0", "xgrammar==0.2.7"]
+
+[project.urls]
+Repository = "https://github.com/AlKeshi/predictive-semantic-safety"
+Issues = "https://github.com/AlKeshi/predictive-semantic-safety/issues"
+
+[project.scripts]
+pss = "pss.__main__:main"
+pss-benchmark = "benchmarks.run:main"
+pss-datagen = "datagen.__main__:main"
+pss-calibrate = "pss.calibration.__main__:main"
+pss-demo = "demos.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["pss*", "datagen*", "benchmarks*", "demos*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+"datagen" = ["assets/*.json", "assets/*.xml", "cases/*.json"]
+"demos" = ["scenes/*.xml", "cases/*.json", "*.json"]
+"pss.sim.mujoco" = ["assets/*.xml", "assets/go1/*", "assets/go1/meshes/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501"]

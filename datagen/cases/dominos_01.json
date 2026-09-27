@@ -1,0 +1,59 @@
+{
+  "id": "dominos_01",
+  "seed": 202609301,
+  "family": "dominos",
+  "intended_hazard": true,
+  "warmup": 0.8,
+  "duration": 14.0,
+  "speed": 0.6937847493657485,
+  "hazard_x": 1.3817903849459845,
+  "hazard_y": 0.7294285085407569,
+  "start_x": -0.5886449500695699,
+  "count": 3,
+  "height": 1.0935983565617846,
+  "spacing": 0.636866941073473,
+  "ball_speed": 0.9908265617552939,
+  "ball_lead": 2.2880840465895735,
+  "ball_radius": 0.12259148375805348,
+  "construction_probe": {
+    "route_crossing": true,
+    "first_crossing": {
+      "time": 4.039999999999998,
+      "x": 1.3817879744590889,
+      "body": "dynamic_obstacle_geom_red_target",
+      "bounds": [
+        [
+          1.2617848168118242,
+          0.06179549593325734,
+          -0.0012311427658697749
+        ],
+        [
+          1.5017911321063535,
+          0.7605254564108781,
+          0.9586380555495595
+        ]
+      ]
+    },
+    "last_crossing": {
+      "time": 4.239999999999976,
+      "x": 1.3817833404769988,
+      "body": "dynamic_obstacle_geom_red_target",
+      "bounds": [
+        [
+          1.2617772435847237,
+          -0.4728044444321002,
+          -0.008477299969787189
+        ],
+        [
+          1.501789437369274,
+          0.6253011226600174,
+          0.17958172879885861
+        ]
+      ]
+    },
+    "release_events": [],
+    "scope": "native physics with robot parked at x=-8; no compared policy outcomes used",
+    "timing_model": "integral of v*(1-exp(-2.5*(t-warmup)))",
+    "initial_longitudinal_separation_m": 1.9704353350155543
+  }
+}

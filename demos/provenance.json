@@ -1,0 +1,120 @@
+{
+  "ceiling-a": {
+    "source_run": "ceiling-a",
+    "original_xml_sha256": "f286c6d3c706b4e6076b188ca1a0ce93ca0b7a1ae091905cb94192c7330e2727",
+    "portable_xml_sha256": "fbe00cd869871e23a995437faceeed13dda020337c3a1c8250e06f8bdf40415c",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "9b85f4eba88e97f3ed7b5213bd25ce29441922248db5e49d725c4fd4ffa737e9",
+    "case_sha256": "038ec68ad309e8ce0221bdf38195d62a5e0e551cc1feb41bfd054f0178771d8f",
+    "scene_file": "scenes/ceiling-a.xml"
+  },
+  "ceiling-b": {
+    "source_run": "ceiling-b",
+    "original_xml_sha256": "9c98bbbbeaccdca5268bcb6a9fbf36f7be12d42d2051a1e27d318605357ba70b",
+    "portable_xml_sha256": "d7a3db56166d0ffe023914070ec7a0c50c20c19a69874a24ad638bbca2862256",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "9b85f4eba88e97f3ed7b5213bd25ce29441922248db5e49d725c4fd4ffa737e9",
+    "case_sha256": "1d98b48006ea102cd752973fa985777aa9df37a939ff2b08b22c72ff6ef87e78",
+    "scene_file": "scenes/ceiling-b.xml"
+  },
+  "ceiling-c": {
+    "source_run": "ceiling-c",
+    "original_xml_sha256": "81bf8e71dd2eb85404cb3f987547a6a95f263e876d0260ce7d281176397f133c",
+    "portable_xml_sha256": "5063faaf3d57e34add2429c3b4ea88d579303c860a2927ef0e7b22b948c3185e",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "9b85f4eba88e97f3ed7b5213bd25ce29441922248db5e49d725c4fd4ffa737e9",
+    "case_sha256": "e6d66de4128253aa64260f4b09c26af0fa29c3150e585b99ab9eb63556b9ca35",
+    "scene_file": "scenes/ceiling-c.xml"
+  },
+  "dominos-a": {
+    "source_run": "dominos-a",
+    "original_xml_sha256": "6c8eaa1178265def1fc8e43f7bc6a813fe3d1c3016502e8256f05207430ebd7d",
+    "portable_xml_sha256": "d17909220b0027df402b0383952b4a40c621899ece601b96275cadd01b09f4a7",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "datagen.scenes.route_scene + go1_scene._go1_scene_xml",
+    "case_sha256": "6ffee23f47078c57daf86f9ee8a6b6288930605bf65ae44f45b5633b351dce4a",
+    "scene_file": "scenes/dominos-a.xml"
+  },
+  "dominos-b": {
+    "source_run": "dominos-b-alt",
+    "original_xml_sha256": "ecdbb7c31c714dcff5b8e444932c5a6166b8dda1bb1806d0db2405671efe5c26",
+    "portable_xml_sha256": "29dc2d89eae2c34a64256e61dcdb7b5bfa1aaca4a0a3a7f4a91fb0cc5629bdda",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "datagen.scenes.route_scene + go1_scene._go1_scene_xml",
+    "case_sha256": "8cb426dd32b9c2e43fe80ee5afec373905bb653afd45f97b642d3464e07fdb92",
+    "scene_file": "scenes/dominos-b.xml"
+  },
+  "dominos-c": {
+    "source_run": "dominos-c",
+    "original_xml_sha256": "6e7ce0c247fe0c3c24291fe9d6631adb825912518a5bf221bcfdcd483a7a279a",
+    "portable_xml_sha256": "8433f5dd9a478f785ca9aa1d2d44fea854937bdbf211dd4a6c2fdc32ddf459c7",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "datagen.scenes.route_scene + go1_scene._go1_scene_xml",
+    "case_sha256": "ecd8c9a689724bcf0975a0c55960ba2d58cb595b4a5e374ae4f45b78f610f275",
+    "scene_file": "scenes/dominos-c.xml"
+  },
+  "stack-a": {
+    "source_run": "stack-a",
+    "original_xml_sha256": "12c095cd8b61ec9c454921fcae54be946793c7e7eb078c48e4def4135c38bc8d",
+    "portable_xml_sha256": "76ec1dbdd6652a9f5cabd703f6a961155f4bcab4f212108366921576a566d586",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "datagen.scenes.route_scene + go1_scene._go1_scene_xml",
+    "case_sha256": "7d3b9d4f2a3ebd1c3fefe4b8f6eda708b622a920e74fb9101921afe9243bd026",
+    "scene_file": "scenes/stack-a.xml"
+  },
+  "stack-b": {
+    "source_run": "stack-b",
+    "original_xml_sha256": "0addf6cd17f8523324617a10c722843ca7bc6edaada5736066807ec97857e763",
+    "portable_xml_sha256": "c968997211460200eb60e1616d5686edda715e2cccd0bf7017fa070e5288c980",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "datagen.scenes.route_scene + go1_scene._go1_scene_xml",
+    "case_sha256": "64c91db7a8d3babee9d918abec9cbd77b9144917feb377ac9aacd2d3f5368563",
+    "scene_file": "scenes/stack-b.xml"
+  },
+  "stack-c": {
+    "source_run": "stack-c",
+    "original_xml_sha256": "2e1f7d42219c3007e29d1b1de41fc6d9193fe84ef080ef3528f4f88cd8ab5720",
+    "portable_xml_sha256": "108125b98b7450ad0b32b124e504f40f02ebbc828caadb0068f9c33ecc6bd6ac",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "datagen.scenes.route_scene + go1_scene._go1_scene_xml",
+    "case_sha256": "50e1c9eec8ea638e2bd8dbd8a2a9b4283b5f88dcb24e350170b63c3fb7072c6f",
+    "scene_file": "scenes/stack-c.xml"
+  },
+  "ceiling-omnivla": {
+    "source_run": "ceiling-a-release-1.60",
+    "original_xml_sha256": "5b06ae52ff8ea49a04524fa38df93e3e83b584a9e807949d4b08af422e5ff8de",
+    "portable_xml_sha256": "fbe00cd869871e23a995437faceeed13dda020337c3a1c8250e06f8bdf40415c",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "9b85f4eba88e97f3ed7b5213bd25ce29441922248db5e49d725c4fd4ffa737e9",
+    "case_sha256": "051a211af42f0c41e9637dc55ac82395baa28b654c45d06b49bd5ba1711796cc",
+    "scene_file": "scenes/ceiling-a.xml"
+  },
+  "dominos-omnivla": {
+    "source_run": "dominos-c-launch-6.5",
+    "original_xml_sha256": "003c98f7686220e8ae816ae3764e4b9ecce98a2e9237f3d829d4b811c8a9acfb",
+    "portable_xml_sha256": "8433f5dd9a478f785ca9aa1d2d44fea854937bdbf211dd4a6c2fdc32ddf459c7",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "datagen.scenes.route_scene + go1_scene._go1_scene_xml",
+    "case_sha256": "2cfe4cca9295d96c37f7908bda9eb8731d5cd9842d984b3aeb074c951650bc8d",
+    "scene_file": "scenes/dominos-c.xml"
+  },
+  "stack-omnivla": {
+    "source_run": "stack-a-launch-7.0",
+    "original_xml_sha256": "f3a5ec972bb13f0cfd5807d4913029e82c63aa2a439bc0c1ff9d64b1f970d316",
+    "portable_xml_sha256": "76ec1dbdd6652a9f5cabd703f6a961155f4bcab4f212108366921576a566d586",
+    "construction": "Initial model reconstructed from the recorded case and original scene builder; excludes end-of-rollout attachment softness, hidden wire alpha and camera mutations.",
+    "builder_sha256": "datagen.scenes.route_scene + go1_scene._go1_scene_xml",
+    "case_sha256": "293f12c3681732920d5428cefc9dc071c1a97056157dc454caaf627a5a431b67",
+    "scene_file": "scenes/stack-a.xml"
+  },
+  "active-avoidance": {
+    "source_run": "left-stack-caw-oracle-ground-07 / nominal-04",
+    "original_xml_sha256": "bcf82867cda943921d86d6340c285ffe8b4ffec1ec58c55e204a1944085f67d7",
+    "portable_xml_sha256": "7794dbafd21c9314dd9fa256e1e81d72731fcaaf2c3ec355ecf285a49ce6a757",
+    "controller_commit": "de51ee8e3b4098acb4da1f6748ebcf4f9ed51300",
+    "adapter_source_commit": "2fa2c17",
+    "origin_evidence": "on: run07, 479 frames / 23.95s, scene crop PSNR 48.29-53.35 dB at 2/4/10/20s; off: nominal04 scene crop PSNR 51.14-53.87 dB at 1/2/4s",
+    "case_sha256": "a5b6e3aa2d6839200a9f7233901b6b96775246cdcc3ae4cffa34d8e9929f5d89",
+    "scene_file": "scenes/active-avoidance.xml"
+  }
+}

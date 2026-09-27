@@ -1,0 +1,106 @@
+name: Release checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.10', '3.11']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install release and test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e '.[dev]'
+      - name: Resolve GPU dependency group
+        if: matrix.python == '3.11'
+        run: python -m pip install --dry-run --no-deps --group gpu
+      - name: Lint
+        run: |
+          python -m ruff check .
+          python -m ruff format --check .
+      - name: Compile
+        run: python -m compileall -q pss benchmarks datagen demos tests
+      - name: Test public release
+        run: python -m pytest -q
+      - name: Build distributable
+        run: python -m build
+      - name: Check installed package outside checkout
+        run: |
+          python -m pip install --force-reinstall --no-deps dist/*.whl
+          cd /tmp
+          python -m pss doctor
+          python -m pytest -q --import-mode=importlib "$GITHUB_WORKSPACE/tests/test_demos.py" "$GITHUB_WORKSPACE/tests/test_public_api.py"
+      - name: Check source distribution outside checkout
+        run: |
+          python -m pip install --force-reinstall --no-deps dist/*.tar.gz
+          cd /tmp
+          python -m pss doctor
+          python -m pss demo --list
+
+  omnivla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - uses: actions/checkout@v4
+        with:
+          repository: NHirose/OmniVLA
+          ref: 5182600cb4a9ee07684e17cdd2a6cbafc56b8a68
+          path: third_party/OmniVLA
+          persist-credentials: false
+      - name: Install OmniVLA dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'torch==2.2.0' 'torchvision==0.17.0' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e '.[omnivla,dev]'
+          python -m pip check
+      - name: Check official loader without a checkpoint
+        env:
+          OMNIVLA_SOURCE: third_party/OmniVLA
+          CUDA_VISIBLE_DEVICES: ''
+        run: python -m pytest -q tests/test_omnivla_dependencies.py
+
+  grammar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install grammar test dependencies
+        run: |
+          python -m pip install 'torch==2.7.1' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e '.[dev]' 'xgrammar==0.1.29'
+      - name: Test compiled schemas without a checkpoint
+        env:
+          PYTHONPATH: .
+        run: python -m pytest -q tests/test_fast_inference.py

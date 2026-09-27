@@ -1,0 +1,122 @@
+[
+  {
+    "video": "01_PSS/Ceiling/ceiling-a.mp4",
+    "demo": "pss/ceiling-a",
+    "sha256": "1b8730ad8d77296975d2a4132c894cfdb08490daeef5c3c32aff76e1e2661ad6",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "01_PSS/Ceiling/ceiling-b.mp4",
+    "demo": "pss/ceiling-b",
+    "sha256": "bda99f1614b3f98fa68cc40f5576da863ea78a277ac2e46373b8f324b5a2dc9a",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "01_PSS/Ceiling/ceiling-c.mp4",
+    "demo": "pss/ceiling-c",
+    "sha256": "bfaa109e59678713805162de8a95109fcfb1dffb9bec3c7b16a73d340e48a4dc",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "01_PSS/Dominos/dominos-a.mp4",
+    "demo": "pss/dominos-a",
+    "sha256": "10ccbbb5d4d19fa815e498d1eb585d4359f8ee6a931eae8dc0ce0a955eba110d",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "01_PSS/Dominos/dominos-b.mp4",
+    "demo": "pss/dominos-b",
+    "sha256": "78fe62cce7c99bd2ae5ee9eb5940213e4d57e9180f7211d666377c26285b3391",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "01_PSS/Dominos/dominos-c.mp4",
+    "demo": "pss/dominos-c",
+    "sha256": "582797f24d0a254de6dd684549a9e4b463e68bad8173676ef03ca82ab707ded4",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "01_PSS/Stack/stack-a.mp4",
+    "demo": "pss/stack-a",
+    "sha256": "ffc876ad5caafef0d445ff214eec29197d0a6c010f0e21b2d7740c9c6534f499",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "01_PSS/Stack/stack-b.mp4",
+    "demo": "pss/stack-b",
+    "sha256": "aee4dee753eeb8fad9bf2dbe6c94f86e8915662d96c0b83a48ded294b4df02c9",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "01_PSS/Stack/stack-c.mp4",
+    "demo": "pss/stack-c",
+    "sha256": "f8067cd368632abc03fc1f91fbe8cd4d6d1ef369df7ebacf2f9cd28b1b2ddf36",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "02_Baselines/01_CBF-QP/Ceiling/ceiling-a-plain_cbf.mp4",
+    "demo": "plain_cbf/ceiling-a",
+    "sha256": "f0f1c78f5602a5f88d21ca1cc8264f42f5446611dc8475b48df3cff96b1047d2",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "02_Baselines/01_CBF-QP/Dominos/dominos-c-plain_cbf.mp4",
+    "demo": "plain_cbf/dominos-c",
+    "sha256": "4712236ffb7ea1b5e74f3b0d550ad6f46017cfbee66c861c172ae5e5131a1673",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "02_Baselines/01_CBF-QP/Stack/stack-b-plain_cbf.mp4",
+    "demo": "plain_cbf/stack-b",
+    "sha256": "b3e3afbeabbf2ce154eb485731a2b2549f5f8692e55b2629721c9e52f8f3ef10",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "02_Baselines/02_Backup-CBF/Ceiling/ceiling-a-backup_cbf.mp4",
+    "demo": "backup_cbf/ceiling-a",
+    "sha256": "5b4384ffe7127bb129f417116efb5f997b06efb9cde3c535c0c59f84e5fc6d59",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "02_Baselines/02_Backup-CBF/Dominos/dominos-c-backup_cbf.mp4",
+    "demo": "backup_cbf/dominos-c",
+    "sha256": "18e20aeb5631ec5c8c9c61dde3a2f3b9af8d7665a8420b8399354e5a2f6c0d88",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "02_Baselines/02_Backup-CBF/Stack/stack-b-backup_cbf.mp4",
+    "demo": "backup_cbf/stack-b",
+    "sha256": "b2fcab254cf04e0233fb3cb9a462baa8fee2203089971a937c898ff55159c259",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "02_Baselines/03_OmniVLA/Ceiling/ceiling-omnivla.mp4",
+    "demo": "omnivla/ceiling",
+    "sha256": "2631a0e805f9996727daaca4830980c7dce71203c8a03482b0db9eee8a2985ee",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "02_Baselines/03_OmniVLA/Dominos/dominos-omnivla.mp4",
+    "demo": "omnivla/dominos",
+    "sha256": "53053ed578f4f394a7a4a5d36967924bdac353b3dbaf825a6442b09e2e398ae4",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "02_Baselines/03_OmniVLA/Stack/stack-omnivla.mp4",
+    "demo": "omnivla/stack",
+    "sha256": "1b14c6d875a64928d0d322ddfe77ddb0fb855857f46c79afc1cd2addaf046a17",
+    "origin_evidence": "byte-identical archived delivery and recorded case"
+  },
+  {
+    "video": "active avoidance/semantic-off.mp4",
+    "demo": "active/off",
+    "sha256": "245f760fd7881912b9969a14a0ac752d234a5c2b999864e68e2714717424a67f",
+    "origin_evidence": "matching scene frames across time; archived run/initial-state records; MP4 retitled/re-encoded"
+  },
+  {
+    "video": "active avoidance/semantic-on.mp4",
+    "demo": "active/on",
+    "sha256": "e518a7be52c84e2bf35a17be035023a66cf9eb340ab491580c8f9e0ee87f4b5c",
+    "origin_evidence": "matching scene frames across time; archived run/initial-state records; MP4 retitled/re-encoded"
+  }
+]

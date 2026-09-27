@@ -1,0 +1,56 @@
+{
+  "id": "stack_05",
+  "seed": 202609205,
+  "family": "stack",
+  "intended_hazard": true,
+  "warmup": 0.8,
+  "duration": 14.0,
+  "speed": 0.607763822675183,
+  "hazard_x": 0.9595407035440294,
+  "hazard_y": 0.7543087167637179,
+  "start_x": -1.3498989369296277,
+  "count": 4,
+  "ball_speed": 1.1456524591434634,
+  "ball_lead": 2.9024033620762637,
+  "construction_probe": {
+    "route_crossing": true,
+    "first_crossing": {
+      "time": 4.9999999999998925,
+      "x": 0.9596102834990904,
+      "body": "dynamic_obstacle_geom_stack_6",
+      "bounds": [
+        [
+          0.8054429808887713,
+          -0.013585351832619497,
+          0.4486613155181478
+        ],
+        [
+          1.1137775861094095,
+          0.40044539461581213,
+          0.8560689971472035
+        ]
+      ]
+    },
+    "last_crossing": {
+      "time": 13.959999999998907,
+      "x": 0.9603239598819371,
+      "body": "dynamic_obstacle_geom_stack_5",
+      "bounds": [
+        [
+          0.7921403364522336,
+          -0.045145810864842234,
+          -2.0793053104484205e-05
+        ],
+        [
+          1.1285075833116405,
+          0.3957891767696676,
+          0.3945673869468955
+        ]
+      ]
+    },
+    "release_events": [],
+    "scope": "native physics with robot parked at x=-8; no compared policy outcomes used",
+    "timing_model": "integral of v*(1-exp(-2.5*(t-warmup)))",
+    "initial_longitudinal_separation_m": 2.309439640473657
+  }
+}

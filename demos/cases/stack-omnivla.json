@@ -1,0 +1,30 @@
+{
+  "id": "stack-a-launch-7.0",
+  "seed": 202609203,
+  "family": "stack",
+  "intended_hazard": true,
+  "warmup": 0.8,
+  "duration": 16.0,
+  "speed": 0.6831896475851668,
+  "hazard_x": 1.2127081737392116,
+  "hazard_y": 0.7373403115460531,
+  "start_x": -1.0685625231869385,
+  "count": 2,
+  "ball_speed": 1.1681436732004244,
+  "ball_lead": 3.4634236127955766,
+  "base_case_id": "stack_03",
+  "replicate_index": 2,
+  "trial_seed": 202609100232,
+  "start_y": -0.004258559201081844,
+  "yaw_rad": 0.02429514907146573,
+  "parent_case": "stack_03_r02",
+  "mirror_y": false,
+  "title": "Impact at the base",
+  "subtitle": "A low stack redirects an impact into falling upper objects.",
+  "ball_launch_time_s": 7.0,
+  "timing_variant": {
+    "parent": "stack-a",
+    "ball_launch_time_s": 7.0,
+    "robot_start_unchanged": true
+  }
+}

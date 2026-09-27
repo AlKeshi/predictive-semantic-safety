@@ -1,0 +1,23 @@
+{
+  "id": "ceiling_06",
+  "seed": 202609106,
+  "family": "ceiling",
+  "intended_hazard": false,
+  "warmup": 0.8,
+  "duration": 20.0,
+  "speed": 0.43145711523980007,
+  "hazard_x": 1.0604369239878315,
+  "hazard_y": -0.04808661092586809,
+  "start_x": -1.2262858985469347,
+  "count": 1,
+  "height": 2.0167179703555433,
+  "lifetime_scale": 0.9409416556665898,
+  "construction_probe": {
+    "route_crossing": false,
+    "first_crossing": null,
+    "last_crossing": null,
+    "release_events": [],
+    "scope": "native physics with robot parked at x=-8; no compared policy outcomes used",
+    "initial_longitudinal_separation_m": 2.286722822534766
+  }
+}

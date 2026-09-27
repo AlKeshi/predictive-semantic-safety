@@ -1,0 +1,69 @@
+{
+  "id": "ceiling_00",
+  "seed": 202609100,
+  "family": "ceiling",
+  "intended_hazard": true,
+  "warmup": 0.8,
+  "duration": 20.0,
+  "speed": 0.446553179138091,
+  "hazard_x": 1.3554002300274401,
+  "hazard_y": 0.015618302619187008,
+  "start_x": -0.9041590671833744,
+  "count": 1,
+  "height": 2.0441514200007656,
+  "lifetime_scale": 0.9276861936406778,
+  "construction_probe": {
+    "route_crossing": true,
+    "first_crossing": {
+      "time": 6.259999999999533,
+      "x": 1.3554002300274401,
+      "body": "fixture_housing",
+      "bounds": [
+        [
+          1.1254002300274397,
+          -0.8651449150069741,
+          0.47439122850866206
+        ],
+        [
+          1.5854002300274406,
+          0.19660101708208771,
+          1.0822374538594954
+        ]
+      ]
+    },
+    "last_crossing": {
+      "time": 6.399999999999517,
+      "x": 1.3554002300274401,
+      "body": "fixture_housing",
+      "bounds": [
+        [
+          1.1254002300274402,
+          -0.9912441691992633,
+          -0.013362641054174867
+        ],
+        [
+          1.5854002300274401,
+          0.16211315255716335,
+          0.28128395291075436
+        ]
+      ]
+    },
+    "release_events": [
+      {
+        "time_s": 3.0139999999998897,
+        "support": "right",
+        "event": "load_damage_release",
+        "load_n": 13.547633795366659
+      },
+      {
+        "time_s": 5.799999999999583,
+        "support": "left",
+        "event": "load_damage_release",
+        "load_n": 31.135463143721655
+      }
+    ],
+    "scope": "native physics with robot parked at x=-8; no compared policy outcomes used",
+    "timing_model": "integral of v*(1-exp(-2.5*(t-warmup)))",
+    "initial_longitudinal_separation_m": 2.2595592972108145
+  }
+}

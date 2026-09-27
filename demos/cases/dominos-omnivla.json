@@ -1,0 +1,33 @@
+{
+  "id": "dominos-c-launch-6.5",
+  "seed": 202609302,
+  "family": "dominos",
+  "intended_hazard": true,
+  "warmup": 0.8,
+  "duration": 16.0,
+  "speed": 0.6992670317878247,
+  "hazard_x": 1.3891778423513335,
+  "hazard_y": 0.6798813458501046,
+  "start_x": -1.0678827230315164,
+  "count": 4,
+  "height": 1.1330263613592806,
+  "spacing": 0.610821107455945,
+  "ball_speed": 1.0280231941865017,
+  "ball_lead": 2.6024984464861705,
+  "ball_radius": 0.11665239360432111,
+  "base_case_id": "dominos_02",
+  "replicate_index": 0,
+  "trial_seed": 202609100120,
+  "start_y": 0.028558902052107468,
+  "yaw_rad": 0.015627493157961893,
+  "parent_case": "dominos_02_r00",
+  "mirror_y": false,
+  "title": "Long cascade from a distant impact",
+  "subtitle": "Four linked bodies separate the initiating impact from the final hazard.",
+  "ball_launch_time_s": 6.5,
+  "timing_variant": {
+    "parent": "dominos-c",
+    "ball_launch_time_s": 6.5,
+    "robot_start_unchanged": true
+  }
+}

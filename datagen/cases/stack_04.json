@@ -1,0 +1,56 @@
+{
+  "id": "stack_04",
+  "seed": 202609204,
+  "family": "stack",
+  "intended_hazard": true,
+  "warmup": 0.8,
+  "duration": 14.0,
+  "speed": 0.6204576549093244,
+  "hazard_x": 1.0145798255030571,
+  "hazard_y": 0.7204792651075077,
+  "start_x": -0.7475952732151947,
+  "count": 3,
+  "ball_speed": 1.2577467514129934,
+  "ball_lead": 2.742725350391825,
+  "construction_probe": {
+    "route_crossing": true,
+    "first_crossing": {
+      "time": 4.039999999999998,
+      "x": 1.0145798,
+      "body": "dynamic_obstacle_geom_stack_5",
+      "bounds": [
+        [
+          0.8466445999999996,
+          0.10845072906152525,
+          0.09601725537681505
+        ],
+        [
+          1.1825150000000002,
+          0.6910924602690818,
+          0.6862877514329587
+        ]
+      ]
+    },
+    "last_crossing": {
+      "time": 13.959999999998907,
+      "x": 1.0145798,
+      "body": "dynamic_obstacle_geom_stack_5",
+      "bounds": [
+        [
+          0.8466445999999997,
+          -0.08331506630839075,
+          -2.079305310445645e-05
+        ],
+        [
+          1.182515,
+          0.3572412536916099,
+          0.3945673869468962
+        ]
+      ]
+    },
+    "release_events": [],
+    "scope": "native physics with robot parked at x=-8; no compared policy outcomes used",
+    "timing_model": "integral of v*(1-exp(-2.5*(t-warmup)))",
+    "initial_longitudinal_separation_m": 1.7621750987182518
+  }
+}

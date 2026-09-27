@@ -1,0 +1,305 @@
+<mujoco model="Go1 ceiling-fixture physical attachment failure">
+  <compiler angle="radian" meshdir="../../pss/sim/mujoco/assets/go1/meshes" autolimits="true" />
+  <option iterations="60" ls_iterations="5" timestep=".002" integrator="implicitfast">
+    </option>
+  <default>
+    <default class="go1">
+      <geom condim="1" contype="0" conaffinity="0" />
+      <joint axis="0 1 0" armature="0.005" damping="0.5" />
+      <position forcerange="-23.7 23.7" inheritrange="1" kp="35" />
+      <default class="abduction">
+        <joint axis="1 0 0" range="-0.863 0.863" frictionloss="0.3" />
+      </default>
+      <default class="hip">
+        <joint range="-0.686 4.501" frictionloss="0.3" />
+      </default>
+      <default class="knee">
+        <joint range="-2.818 -0.888" frictionloss="1.0" />
+        <position forcerange="-35.55 35.55" />
+      </default>
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" material="dark" />
+      </default>
+      <default class="collision">
+        <geom group="3" type="capsule" contype="0" conaffinity="1" />
+        <default class="hip_left1">
+          <geom size="0.046 0.02" pos="0 0.045 0" quat="1 1 0 0" type="cylinder" />
+        </default>
+        <default class="hip_left2">
+          <geom size="0.031 0.02" pos="0 0.065 0" quat="1 1 0 0" type="cylinder" />
+        </default>
+        <default class="hip_left3">
+          <geom size="0.046 0.02" quat="1 1 0 0" type="cylinder" />
+        </default>
+        <default class="hip_right1">
+          <geom size="0.046 0.02" pos="0 -0.045 0" quat="1 1 0 0" type="cylinder" />
+        </default>
+        <default class="hip_right2">
+          <geom size="0.031 0.02" pos="0 -0.065 0" quat="1 1 0 0" type="cylinder" />
+        </default>
+        <default class="hip_right3">
+          <geom size="0.046 0.02" quat="1 1 0 0" type="cylinder" />
+        </default>
+        <default class="thigh1">
+          <geom size="0.015" fromto="-0.02 0 0 -0.02 0 -0.16" />
+        </default>
+        <default class="thigh2">
+          <geom size="0.015" fromto="0 0 0 -0.02 0 -0.1" />
+        </default>
+        <default class="thigh3">
+          <geom size="0.015" fromto="-0.02 0 -0.16 0 0 -0.2" />
+        </default>
+        <default class="calf1">
+          <geom size="0.01" fromto="0 0 0 0.02 0 -0.13" />
+        </default>
+        <default class="calf2">
+          <geom size="0.01" fromto="0.02 0 -0.13 0 0 -0.2" />
+        </default>
+        <default class="foot">
+          <geom type="sphere" size="0.023" pos="0 0 -0.213" solimp="0.9 .95 0.023" contype="0" conaffinity="1" />
+        </default>
+      </default>
+    </default>
+  </default>
+  <asset>
+    <material name="dark" rgba="0.22 0.25 0.29 1" specular="0.38" shininess="0.32" />
+    <mesh class="go1" file="trunk.stl" />
+    <mesh class="go1" file="hip.stl" />
+    <mesh class="go1" file="thigh_mirror.stl" />
+    <mesh class="go1" file="calf.stl" />
+    <mesh class="go1" file="thigh.stl" />
+    <texture type="skybox" builtin="gradient" rgb1=".65 .72 .76" rgb2=".88 .90 .88" width="512" height="3072" />
+    <texture name="stone_grid" type="2d" builtin="checker" rgb1=".63 .66 .66" rgb2=".60 .63 .64" width="512" height="512" />
+    <material name="stone" rgba=".66 .69 .68 1" texture="stone_grid" texrepeat="7 5" reflectance="0" />
+    <material name="plaster" rgba=".88 .87 .81 1" />
+    <material name="ceiling" rgba=".96 .95 .90 1" />
+    <material name="sage" rgba=".30 .40 .39 1" />
+    <material name="oak" rgba=".45 .31 .18 1" />
+    <material name="graphite" rgba=".10 .14 .16 1" />
+    <material name="metal" rgba=".46 .52 .53 1" specular=".8" shininess=".7" />
+    <material name="diffuser" rgba="1 .89 .64 1" emission=".5" />
+    <material name="window" rgba=".72 .84 .85 1" emission=".14" />
+    <material name="fixture_bronze" rgba=".68 .43 .15 1" specular=".35" shininess=".4" />
+  </asset>
+  <worldbody>
+    <light name="spotlight" mode="targetbodycom" target="trunk" pos="3 0 4" />
+    <body name="trunk" pos="0 0 0.445" childclass="go1">
+      <camera name="track" pos="0.846 -1.3 0.316" xyaxes="0.866 0.500 0.000 -0.171 0.296 0.940" mode="trackcom" />
+      <camera name="top" pos="-1 0 1" xyaxes="0 -1 0 0.7 0 0.7" mode="trackcom" />
+      <camera name="side" pos="0 -1 .3" xyaxes="1 0 0 0 1 2" mode="trackcom" />
+      <camera name="back" pos="-1 0 .3" xyaxes="0 -1 0 1 0 2" mode="trackcom" />
+      <body name="rgbd_mast" pos="0.08 0 0.055">
+        <geom type="cylinder" size="0.012 0.145" pos="0 0 0.145" mass="0.04" rgba="0.12 0.14 0.17 1" contype="0" conaffinity="0" group="2" />
+        <camera name="omnivla_ego" pos="0.18 0 0.295" xyaxes="0 -1 0 0 0 1" mode="fixed" fovy="58" />
+        <body name="rgbd_head" pos="0.115 0 0.295" quat="0.9930684569549263 0 -0.11753739745783764 0">
+          <geom type="box" size="0.055 0.042 0.032" mass="0.12" rgba="0.07 0.09 0.12 1" contype="0" conaffinity="0" group="2" />
+          <geom type="cylinder" size="0.014 0.006" pos="0.055 -0.021 0" quat="0.707107 0 0.707107 0" mass="0.01" rgba="0.05 0.18 0.28 1" contype="0" conaffinity="0" group="2" />
+          <geom type="cylinder" size="0.014 0.006" pos="0.055 0.021 0" quat="0.707107 0 0.707107 0" mass="0.01" rgba="0.05 0.18 0.28 1" contype="0" conaffinity="0" group="2" />
+          <camera name="ego_rgbd" pos="0.065 0 0" xyaxes="0 -1 0 0 0 1" mode="fixed" fovy="64" />
+        </body>
+      </body>
+      <site name="head" pos="0.3 0 0" rgba="1 0 0 1" size="0.02" group="5" />
+      <inertial pos="0.0223 0.002 -0.0005" quat="-0.00342088 0.705204 0.000106698 0.708996" mass="5.204" diaginertia="0.0716565 0.0630105 0.0168101" />
+      <freejoint />
+      <geom class="visual" mesh="trunk" />
+      <geom class="collision" size="0.125 0.04 0.057" type="box" />
+      <geom class="collision" quat="1 0 1 0" pos="0 -0.04 0" size="0.058 0.125" type="cylinder" />
+      <geom class="collision" quat="1 0 1 0" pos="0 +0.04 0" size="0.058 0.125" type="cylinder" />
+      <site name="imu" pos="-0.01592 -0.06659 -0.00617" group="5" />
+      <body name="FR_hip" pos="0.1881 -0.04675 0">
+        <inertial pos="-0.0049166 0.00762615 -8.865e-05" quat="0.507341 0.514169 0.495027 0.482891" mass="0.68" diaginertia="0.000734064 0.000468438 0.000398719" />
+        <joint class="abduction" name="FR_hip_joint" />
+        <geom class="visual" mesh="hip" quat="1 0 0 0" />
+        <geom class="hip_right1" />
+        <geom class="hip_right2" />
+        <body name="FR_thigh" pos="0 -0.08 0">
+          <inertial pos="-0.00304722 0.019315 -0.0305004" quat="0.65243 -0.0272313 0.0775126 0.753383" mass="1.009" diaginertia="0.00478717 0.00460903 0.000709268" />
+          <joint class="hip" name="FR_thigh_joint" />
+          <geom class="visual" mesh="thigh_mirror" />
+          <geom class="thigh1" />
+          <geom class="thigh2" />
+          <geom class="thigh3" />
+          <body name="FR_calf" pos="0 0 -0.213">
+            <inertial pos="0.00429862 0.000976676 -0.146197" quat="0.691246 0.00357467 0.00511118 0.722592" mass="0.195862" diaginertia="0.00149767 0.00148468 3.58427e-05" />
+            <joint class="knee" name="FR_calf_joint" />
+            <geom class="visual" mesh="calf" />
+            <geom class="calf1" />
+            <geom class="calf2" />
+            <geom name="FR" class="foot" />
+            <site name="FR" pos="0 0 -0.213" type="sphere" size="0.023" group="5" />
+          </body>
+        </body>
+      </body>
+      <body name="FL_hip" pos="0.1881 0.04675 0">
+        <inertial pos="-0.0049166 -0.00762615 -8.865e-05" quat="0.482891 0.495027 0.514169 0.507341" mass="0.68" diaginertia="0.000734064 0.000468438 0.000398719" />
+        <joint class="abduction" name="FL_hip_joint" />
+        <geom class="visual" mesh="hip" />
+        <geom class="hip_left1" />
+        <geom class="hip_left2" />
+        <body name="FL_thigh" pos="0 0.08 0">
+          <inertial pos="-0.00304722 -0.019315 -0.0305004" quat="0.753383 0.0775126 -0.0272313 0.65243" mass="1.009" diaginertia="0.00478717 0.00460903 0.000709268" />
+          <joint class="hip" name="FL_thigh_joint" />
+          <geom class="visual" mesh="thigh" />
+          <geom class="thigh1" />
+          <geom class="thigh2" />
+          <geom class="thigh3" />
+          <body name="FL_calf" pos="0 0 -0.213">
+            <inertial pos="0.00429862 0.000976676 -0.146197" quat="0.691246 0.00357467 0.00511118 0.722592" mass="0.195862" diaginertia="0.00149767 0.00148468 3.58427e-05" />
+            <joint class="knee" name="FL_calf_joint" />
+            <geom class="visual" mesh="calf" />
+            <geom class="calf1" />
+            <geom class="calf2" />
+            <geom name="FL" class="foot" />
+            <site name="FL" pos="0 0 -0.213" type="sphere" size="0.023" group="5" />
+          </body>
+        </body>
+      </body>
+      <body name="RR_hip" pos="-0.1881 -0.04675 0">
+        <inertial pos="0.0049166 0.00762615 -8.865e-05" quat="0.495027 0.482891 0.507341 0.514169" mass="0.68" diaginertia="0.000734064 0.000468438 0.000398719" />
+        <joint class="abduction" name="RR_hip_joint" />
+        <geom class="visual" quat="0 0 0 -1" mesh="hip" />
+        <geom class="hip_right1" />
+        <geom class="hip_right2" />
+        <geom class="hip_right3" />
+        <body name="RR_thigh" pos="0 -0.08 0">
+          <inertial pos="-0.00304722 0.019315 -0.0305004" quat="0.65243 -0.0272313 0.0775126 0.753383" mass="1.009" diaginertia="0.00478717 0.00460903 0.000709268" />
+          <joint class="hip" name="RR_thigh_joint" />
+          <geom class="visual" mesh="thigh_mirror" />
+          <geom class="thigh1" />
+          <geom class="thigh2" />
+          <geom class="thigh3" />
+          <body name="RR_calf" pos="0 0 -0.213">
+            <inertial pos="0.00429862 0.000976676 -0.146197" quat="0.691246 0.00357467 0.00511118 0.722592" mass="0.195862" diaginertia="0.00149767 0.00148468 3.58427e-05" />
+            <joint class="knee" name="RR_calf_joint" />
+            <geom class="visual" mesh="calf" />
+            <geom class="calf1" />
+            <geom class="calf2" />
+            <geom name="RR" class="foot" />
+            <site name="RR" pos="0 0 -0.213" type="sphere" size="0.023" group="5" />
+          </body>
+        </body>
+      </body>
+      <body name="RL_hip" pos="-0.1881 0.04675 0">
+        <inertial pos="0.0049166 -0.00762615 -8.865e-05" quat="0.514169 0.507341 0.482891 0.495027" mass="0.68" diaginertia="0.000734064 0.000468438 0.000398719" />
+        <joint class="abduction" name="RL_hip_joint" />
+        <geom class="visual" quat="0 0 1 0" mesh="hip" />
+        <geom class="hip_left1" />
+        <geom class="hip_left2" />
+        <geom class="hip_left3" />
+        <body name="RL_thigh" pos="0 0.08 0">
+          <inertial pos="-0.00304722 -0.019315 -0.0305004" quat="0.753383 0.0775126 -0.0272313 0.65243" mass="1.009" diaginertia="0.00478717 0.00460903 0.000709268" />
+          <joint class="hip" name="RL_thigh_joint" />
+          <geom class="visual" mesh="thigh" />
+          <geom class="thigh1" />
+          <geom class="thigh2" />
+          <geom class="thigh3" />
+          <body name="RL_calf" pos="0 0 -0.213">
+            <inertial pos="0.00429862 0.000976676 -0.146197" quat="0.691246 0.00357467 0.00511118 0.722592" mass="0.195862" diaginertia="0.00149767 0.00148468 3.58427e-05" />
+            <joint class="knee" name="RL_calf_joint" />
+            <geom class="visual" mesh="calf" />
+            <geom class="calf1" />
+            <geom class="calf2" />
+            <geom name="RL" class="foot" />
+            <site name="RL" pos="0 0 -0.213" type="sphere" size="0.023" group="5" />
+          </body>
+        </body>
+      </body>
+    </body>
+    <geom name="floor" type="plane" size="8 5 .1" material="stone" friction=".9 .01 .001" />
+    <geom name="back_wall" type="box" pos="1.2 1.9 1.4" size="4 .10 1.4" material="plaster" />
+    <geom name="back_skirting" type="box" pos="1.2 1.775 .075" size="4 .025 .075" material="graphite" />
+    <geom type="box" pos="-1.45 1.755 1.75" size=".46 .035 .71" material="graphite" />
+    <geom type="box" pos="-1.45 1.71 1.75" size=".41 .02 .66" material="window" contype="0" conaffinity="0" />
+    <geom type="box" pos="-1.45 1.675 1.75" size=".016 .025 .67" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="-0.25 1.755 1.75" size=".46 .035 .71" material="graphite" />
+    <geom type="box" pos="-0.25 1.71 1.75" size=".41 .02 .66" material="window" contype="0" conaffinity="0" />
+    <geom type="box" pos="-0.25 1.675 1.75" size=".016 .025 .67" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="2.85 1.755 1.75" size=".46 .035 .71" material="graphite" />
+    <geom type="box" pos="2.85 1.71 1.75" size=".41 .02 .66" material="window" contype="0" conaffinity="0" />
+    <geom type="box" pos="2.85 1.675 1.75" size=".016 .025 .67" material="metal" contype="0" conaffinity="0" />
+    <geom name="storage" type="box" pos="3.7 1.32 .48" size=".60 .40 .48" material="sage" />
+    <geom name="storage_top" type="box" pos="3.7 1.32 .975" size=".63 .43 .025" material="oak" />
+    <geom name="ceiling_panel" type="box" pos="1.2 .2 2.85" size="3.5 1.75 .06" material="ceiling" />
+    <geom type="box" pos="-1.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="-0.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="0.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="1.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="2.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="3.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <light name="daylight" pos="-.5 -2.8 4.0" dir=".2 .5 -1" directional="true" diffuse=".85 .89 .93" ambient=".13 .14 .15" castshadow="true" />
+    <light name="warm_fill" pos="3 1.2 2.5" dir="-.5 -.4 -1" diffuse=".45 .39 .30" castshadow="false" />
+    <light name="interior_fill" pos="-.8 -1.1 2.35" dir=".2 .2 -.7" diffuse=".7 .68 .60" ambient=".08 .08 .08" castshadow="false" />
+    <body name="loose_fixture" pos="2.05 0.65 2.2" quat="0.9537169507482269 0.0 0.0 0.3007057995042731">
+      <freejoint name="fixture_free" />
+      <inertial pos="0 0 0" mass="3.2" diaginertia=".057 .28 .30" />
+      <geom name="fixture_housing" type="box" size=".58 .23 .038" material="fixture_bronze" />
+      <geom name="fixture_luminous_face" type="box" pos="0 0 -.044" size=".53 .19 .013" material="diffuser" mass="0" contype="0" conaffinity="0" />
+      <geom type="box" pos="0 -0.223 0" size=".59 .010 .045" material="metal" mass="0" contype="0" conaffinity="0" />
+      <geom type="box" pos="0 0.223 0" size=".59 .010 .045" material="metal" mass="0" contype="0" conaffinity="0" />
+      <geom type="box" pos="-0.578 0 0" size=".010 .23 .045" material="metal" mass="0" contype="0" conaffinity="0" />
+      <geom type="box" pos="0.578 0 0" size=".010 .23 .045" material="metal" mass="0" contype="0" conaffinity="0" />
+      <site name="left_panel_anchor" pos="-0.49 0.0 0.04" size=".005" rgba="0 0 0 0" />
+      <site name="right_panel_anchor" pos="0.49 0.0 0.04" size=".005" rgba="0 0 0 0" />
+    </body>
+    <camera name="scene_preview" pos="-2.5 -3.6 1.7" xyaxes="0.7474093186836597 -0.6643638388299198 0.0 0.065880573607152 0.07411564530804599 0.9950711638580251" fovy="54" />
+    <geom name="left_mount" type="cylinder" pos="1.6486154982983938 0.3689475461879875 2.73" size=".065 .035" material="metal" />
+    <site name="left_ceiling_anchor" pos="1.6486154982983938 0.3689475461879875 2.73" size=".005" rgba="0 0 0 0" />
+    <geom name="left_remaining_wire_stub" type="capsule" fromto="1.6486154982983938 0.3689475461879875 2.71 1.6486154982983938 0.3689475461879875 2.58" size=".008" material="graphite" contype="0" conaffinity="0" />
+    <geom name="right_mount" type="cylinder" pos="2.451384501701606 0.9310524538120126 2.73" size=".065 .035" material="metal" />
+    <site name="right_ceiling_anchor" pos="2.451384501701606 0.9310524538120126 2.73" size=".005" rgba="0 0 0 0" />
+    <geom name="right_remaining_wire_stub" type="capsule" fromto="2.451384501701606 0.9310524538120126 2.71 2.451384501701606 0.9310524538120126 2.58" size=".008" material="graphite" contype="0" conaffinity="0" />
+  </worldbody>
+  <actuator>
+    <position class="abduction" name="FR_hip" joint="FR_hip_joint" />
+    <position class="hip" name="FR_thigh" joint="FR_thigh_joint" />
+    <position class="knee" name="FR_calf" joint="FR_calf_joint" />
+    <position class="abduction" name="FL_hip" joint="FL_hip_joint" />
+    <position class="hip" name="FL_thigh" joint="FL_thigh_joint" />
+    <position class="knee" name="FL_calf" joint="FL_calf_joint" />
+    <position class="abduction" name="RR_hip" joint="RR_hip_joint" />
+    <position class="hip" name="RR_thigh" joint="RR_thigh_joint" />
+    <position class="knee" name="RR_calf" joint="RR_calf_joint" />
+    <position class="abduction" name="RL_hip" joint="RL_hip_joint" />
+    <position class="hip" name="RL_thigh" joint="RL_thigh_joint" />
+    <position class="knee" name="RL_calf" joint="RL_calf_joint" />
+  </actuator>
+  <sensor>
+    <gyro site="imu" name="gyro" />
+    <velocimeter site="imu" name="local_linvel" />
+    <accelerometer site="imu" name="accelerometer" />
+    <framepos objtype="site" objname="imu" name="position" />
+    <framezaxis objtype="site" objname="imu" name="upvector" />
+    <framexaxis objtype="site" objname="imu" name="forwardvector" />
+    <framelinvel objtype="site" objname="imu" name="global_linvel" />
+    <frameangvel objtype="site" objname="imu" name="global_angvel" />
+    <framequat objtype="site" objname="imu" name="orientation" />
+    <framelinvel objtype="site" objname="FR" name="FR_global_linvel" />
+    <framelinvel objtype="site" objname="FL" name="FL_global_linvel" />
+    <framelinvel objtype="site" objname="RR" name="RR_global_linvel" />
+    <framelinvel objtype="site" objname="RL" name="RL_global_linvel" />
+    <framepos objtype="site" objname="FR" name="FR_pos" reftype="site" refname="imu" />
+    <framepos objtype="site" objname="FL" name="FL_pos" reftype="site" refname="imu" />
+    <framepos objtype="site" objname="RR" name="RR_pos" reftype="site" refname="imu" />
+    <framepos objtype="site" objname="RL" name="RL_pos" reftype="site" refname="imu" />
+  </sensor>
+  <visual>
+    <global offwidth="1800" offheight="1200" />
+    <quality shadowsize="4096" offsamples="4" />
+    <headlight ambient=".36 .37 .38" diffuse=".70 .68 .63" specular=".08 .08 .08" />
+    <map znear=".01" />
+  </visual>
+  <equality>
+    <connect name="left_attachment" body1="loose_fixture" anchor="-0.49000000000000005 -1.3241815637170904e-17 0.5299999999999998" solref=".004 1" solimp=".95 .99 .001" active="true" />
+    <connect name="right_attachment" body1="loose_fixture" anchor="0.49000000000000027 -8.636216195107557e-17 0.5299999999999998" solref=".004 1" solimp=".95 .99 .001" active="true" />
+  </equality>
+  <tendon>
+    <spatial name="left_suspension_wire" width=".008" rgba=".11 .13 .14 1">
+      <site site="left_ceiling_anchor" />
+      <site site="left_panel_anchor" />
+    </spatial>
+    <spatial name="right_suspension_wire" width=".008" rgba=".11 .13 .14 1">
+      <site site="right_ceiling_anchor" />
+      <site site="right_panel_anchor" />
+    </spatial>
+  </tendon>
+</mujoco>

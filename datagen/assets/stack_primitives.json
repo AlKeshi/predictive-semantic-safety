@@ -1,0 +1,289 @@
+{
+  "objects": [
+    {
+      "name": "purple_ball",
+      "position": [
+        1.1164354024785745,
+        2.7984893379233675,
+        0.15000000223517418
+      ],
+      "radius": 0.15000000223517418,
+      "shape": "sphere",
+      "size": null,
+      "euler_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "linear_velocity": [
+        0.0,
+        -1.2,
+        0.0
+      ],
+      "angular_velocity": [
+        7.999999880790712,
+        0.0,
+        0.0
+      ],
+      "activation_distance": null,
+      "activation_center": null,
+      "density": 119.36620198283637,
+      "friction": 0.01,
+      "restitution": 0.0,
+      "color": [
+        0.63,
+        0.06,
+        0.88
+      ]
+    },
+    {
+      "name": "stack_4",
+      "position": [
+        1.1164354024785745,
+        1.1884893356881934,
+        0.11779067292809486
+      ],
+      "radius": 0.0,
+      "shape": "cuboid",
+      "size": [
+        0.4271998107433319,
+        0.16,
+        0.23558134585618973
+      ],
+      "euler_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "linear_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "activation_distance": null,
+      "activation_center": null,
+      "density": 16.000000644919798,
+      "friction": 0.2896945714459245,
+      "restitution": 0.35808957934476804,
+      "color": [
+        0.04,
+        0.34,
+        0.88
+      ]
+    },
+    {
+      "name": "stack_5",
+      "position": [
+        1.1164354024785745,
+        1.1884893356881934,
+        0.4558594976551831
+      ],
+      "radius": 0.0,
+      "shape": "cuboid",
+      "size": [
+        0.3358703926205635,
+        0.3945881724357605,
+        0.4405563175678253
+      ],
+      "euler_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "linear_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "activation_distance": null,
+      "activation_center": null,
+      "density": 16.000000246423593,
+      "friction": 0.676304203229279,
+      "restitution": 0.7293602547424171,
+      "color": [
+        0.05,
+        0.72,
+        0.7
+      ]
+    },
+    {
+      "name": "stack_6",
+      "position": [
+        1.1164354024785745,
+        1.1884893356881934,
+        0.8088533249683678
+      ],
+      "radius": 0.0,
+      "shape": "cuboid",
+      "size": [
+        0.30826277285814285,
+        0.3176843896508217,
+        0.26543138176202774
+      ],
+      "euler_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "linear_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "activation_distance": null,
+      "activation_center": null,
+      "density": 15.999999229532076,
+      "friction": 0.4052142007398556,
+      "restitution": 0.7717174178443564,
+      "color": [
+        0.94,
+        0.48,
+        0.035
+      ]
+    },
+    {
+      "name": "stack_7",
+      "position": [
+        1.1164354024785745,
+        1.1884893356881934,
+        1.1191912782378495
+      ],
+      "radius": 0.0,
+      "shape": "cuboid",
+      "size": [
+        0.30855806171894073,
+        0.32013076543807983,
+        0.35524456948041916
+      ],
+      "euler_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "linear_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "activation_distance": null,
+      "activation_center": null,
+      "density": 15.999999727368891,
+      "friction": 0.5149782694843866,
+      "restitution": 0.1648072422725474,
+      "color": [
+        0.1,
+        0.68,
+        0.19
+      ]
+    },
+    {
+      "name": "red_target",
+      "position": [
+        1.1164354024785745,
+        1.1884893356881934,
+        1.4750736434943974
+      ],
+      "radius": 0.17826001346111298,
+      "shape": "sphere",
+      "size": null,
+      "euler_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "linear_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_velocity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "activation_distance": null,
+      "activation_center": null,
+      "density": 30.557748792724432,
+      "friction": 0.5,
+      "restitution": 0.0,
+      "color": [
+        0.88,
+        0.075,
+        0.055
+      ]
+    }
+  ],
+  "source": {
+    "source_file": "pilot_towers_nb4_fr015_SJ000_gr000sph_mono1_dis0_occ0_tdwroom_0121.hdf5",
+    "sha256": "7ba69dafda433f25b3648cd8d7c31e86b75368feb8b07869b464e4335ed94eba",
+    "trial": "train_0121",
+    "read_groups": [
+      "static"
+    ],
+    "source_ids": {
+      "purple_ball": 3,
+      "stack_4": 4,
+      "stack_5": 5,
+      "stack_6": 6,
+      "stack_7": 7,
+      "red_target": 8
+    },
+    "uniform_geometry_scale": 0.75,
+    "basis_raw_to_mujoco": [
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "translation_m": [
+      1.1164354024785745,
+      1.1884893356881934,
+      -0.007499999832361937
+    ],
+    "ball_speed_mps": 1.2,
+    "base_width_along_impact_m": 0.16,
+    "source_base_width_scaled_m": 0.484236404299736,
+    "ball_initial_contact_lead_s": 1.15,
+    "clear_ball_lateral_offset_m": null,
+    "native_adaptations": [
+      "native cuboid solids; analytic sphere replaces source sphere mesh",
+      "lowest support block narrowed along impact direction at constant density; all remaining source block dimensions and heights retained",
+      "initial ideal zero-velocity stack; source bottom-pivot offsets converted to centers",
+      "native friction and contact solver; source masses scaled with volume",
+      "rolling probe initialized before impact instead of applying source push impulse",
+      "new colors, route and camera; no future dataset poses or SGNN arrays read"
+    ],
+    "benchmark_reproduction": false
+  }
+}

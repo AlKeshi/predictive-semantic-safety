@@ -1,0 +1,125 @@
+{
+  "scenario_id": "pss-paper-benchmark-v1/stack_00",
+  "seed": 202609200,
+  "table": {
+    "size": [
+      0.6,
+      0.6,
+      0.65
+    ],
+    "position": [
+      0.0,
+      4.0
+    ],
+    "friction": 0.8
+  },
+  "objects": [],
+  "vcom": [],
+  "vpsf": [],
+  "disturbance": null,
+  "robot_start": [
+    -0.42635606487514655,
+    0.0
+  ],
+  "robot_goal": [
+    3.3559042963772683,
+    0.0
+  ],
+  "horizon": 4.0,
+  "dynamic_obstacles": [],
+  "scene_props": [
+    {
+      "name": "event_floor_inlay",
+      "shape": "cuboid",
+      "size": [
+        1.9,
+        3.4,
+        0.002
+      ],
+      "position": [
+        1.15,
+        1.9,
+        0.0005
+      ],
+      "euler_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "friction": 0.6,
+      "color": [
+        0.53,
+        0.57,
+        0.59
+      ],
+      "material": null,
+      "collidable": false
+    },
+    {
+      "name": "route_floor_inlay",
+      "shape": "cuboid",
+      "size": [
+        4.25,
+        0.7,
+        0.002
+      ],
+      "position": [
+        0.675,
+        0.0,
+        0.001
+      ],
+      "euler_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "friction": 0.6,
+      "color": [
+        0.58,
+        0.58,
+        0.56
+      ],
+      "material": null,
+      "collidable": false
+    }
+  ],
+  "extra_tables": [],
+  "extra_disturbances": [],
+  "meta": {
+    "visual_style": "physion_gallery",
+    "physics": "native_mujoco_contact",
+    "code_world_grounded": false,
+    "observation_duration_s": 0.8,
+    "sensor": {
+      "camera_name": "omnivla_ego",
+      "width": 960,
+      "height": 540,
+      "vertical_fov_deg": 85.0,
+      "horizontal_fov_deg": 116.91171544474624,
+      "projection": "perspective",
+      "visibility_scope": "forward_frustum_with_physical_occlusion",
+      "mount": "rigid_body_forward",
+      "pitch_down_deg": -8.0
+    },
+    "omnivla_camera_mount": {
+      "position": [
+        0.34,
+        0.0,
+        0.32
+      ],
+      "pitch_down_deg": -8.0,
+      "fovy_deg": 85.0
+    },
+    "mujoco_showcase_camera": {
+      "lookat": [
+        1.1,
+        0.8,
+        0.55
+      ],
+      "distance": 5.8,
+      "azimuth": 130.0,
+      "elevation": -32.0
+    },
+    "showcase_onboard_camera": "omnivla_forward"
+  }
+}

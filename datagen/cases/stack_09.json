@@ -1,0 +1,25 @@
+{
+  "id": "stack_09",
+  "seed": 2026091109,
+  "family": "stack",
+  "intended_hazard": true,
+  "warmup": 0.8,
+  "duration": 14.0,
+  "speed": 0.6768218272942884,
+  "hazard_x": 1.2409260302191136,
+  "hazard_y": 0.7201552868777108,
+  "start_x": -0.9926120200376272,
+  "count": 2,
+  "ball_speed": 1.1424313218950324,
+  "ball_lead": 3.5025539677577866,
+  "construction_parent": "stack_03",
+  "construction_rule": "seeded slight physical variation; retained regardless of outcomes",
+  "construction_probe": {
+    "route_crossing": false,
+    "first_crossing": null,
+    "last_crossing": null,
+    "release_events": [],
+    "scope": "native physics with robot parked at x=-8; no compared policy outcomes used",
+    "initial_longitudinal_separation_m": 2.233538050256741
+  }
+}

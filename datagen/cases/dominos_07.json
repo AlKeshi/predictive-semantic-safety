@@ -1,0 +1,26 @@
+{
+  "id": "dominos_07",
+  "seed": 202609307,
+  "family": "dominos",
+  "intended_hazard": false,
+  "warmup": 0.8,
+  "duration": 14.0,
+  "speed": 0.6389132534960196,
+  "hazard_x": 1.255791293736669,
+  "hazard_y": 0.7577204313231793,
+  "start_x": -0.8526470056035227,
+  "count": 3,
+  "height": 1.2023692299812783,
+  "spacing": 0.6137476910927024,
+  "ball_speed": 1.0849832254482203,
+  "ball_lead": 2.5748018700124957,
+  "ball_radius": 0.1271704970254646,
+  "construction_probe": {
+    "route_crossing": false,
+    "first_crossing": null,
+    "last_crossing": null,
+    "release_events": [],
+    "scope": "native physics with robot parked at x=-8; no compared policy outcomes used",
+    "initial_longitudinal_separation_m": 2.108438299340192
+  }
+}

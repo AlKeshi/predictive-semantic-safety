@@ -1,0 +1,23 @@
+{
+  "id": "stack_07",
+  "seed": 202609207,
+  "family": "stack",
+  "intended_hazard": false,
+  "warmup": 0.8,
+  "duration": 14.0,
+  "speed": 0.69405636819291,
+  "hazard_x": 1.0515950262044662,
+  "hazard_y": 0.8192902179886082,
+  "start_x": -1.2388176715938053,
+  "count": 3,
+  "ball_speed": 1.2587170545327668,
+  "ball_lead": 2.776373754372835,
+  "construction_probe": {
+    "route_crossing": false,
+    "first_crossing": null,
+    "last_crossing": null,
+    "release_events": [],
+    "scope": "native physics with robot parked at x=-8; no compared policy outcomes used",
+    "initial_longitudinal_separation_m": 2.2904126977982715
+  }
+}

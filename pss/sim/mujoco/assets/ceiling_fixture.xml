@@ -1,0 +1,83 @@
+<mujoco model="ceiling_fixture_room">
+  <option iterations="60" ls_iterations="5" timestep=".002" integrator="implicitfast">
+    </option>
+  <visual>
+    <global offwidth="1800" offheight="1200" />
+    <quality shadowsize="4096" offsamples="4" />
+    <headlight ambient=".36 .37 .38" diffuse=".70 .68 .63" specular=".08 .08 .08" />
+    <map znear=".01" />
+  </visual>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1=".65 .72 .76" rgb2=".88 .90 .88" width="512" height="3072" />
+    <texture name="stone_grid" type="2d" builtin="checker" rgb1=".63 .66 .66" rgb2=".60 .63 .64" width="512" height="512" />
+    <material name="stone" rgba=".66 .69 .68 1" texture="stone_grid" texrepeat="7 5" reflectance="0" />
+    <material name="plaster" rgba=".88 .87 .81 1" />
+    <material name="ceiling" rgba=".96 .95 .90 1" />
+    <material name="sage" rgba=".30 .40 .39 1" />
+    <material name="oak" rgba=".45 .31 .18 1" />
+    <material name="graphite" rgba=".10 .14 .16 1" />
+    <material name="metal" rgba=".46 .52 .53 1" specular=".8" shininess=".7" />
+    <material name="diffuser" rgba="1 .89 .64 1" emission=".5" />
+    <material name="window" rgba=".72 .84 .85 1" emission=".14" />
+    <material name="fixture_bronze" rgba=".68 .43 .15 1" specular=".35" shininess=".4" />
+  </asset>
+  <worldbody>
+    <geom name="floor" type="plane" size="8 5 .1" material="stone" friction=".9 .01 .001" />
+    <geom name="back_wall" type="box" pos="1.2 1.9 1.4" size="4 .10 1.4" material="plaster" />
+    <geom name="back_skirting" type="box" pos="1.2 1.775 .075" size="4 .025 .075" material="graphite" />
+    <geom type="box" pos="-1.45 1.755 1.75" size=".46 .035 .71" material="graphite" />
+    <geom type="box" pos="-1.45 1.71 1.75" size=".41 .02 .66" material="window" contype="0" conaffinity="0" />
+    <geom type="box" pos="-1.45 1.675 1.75" size=".016 .025 .67" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="-0.25 1.755 1.75" size=".46 .035 .71" material="graphite" />
+    <geom type="box" pos="-0.25 1.71 1.75" size=".41 .02 .66" material="window" contype="0" conaffinity="0" />
+    <geom type="box" pos="-0.25 1.675 1.75" size=".016 .025 .67" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="2.85 1.755 1.75" size=".46 .035 .71" material="graphite" />
+    <geom type="box" pos="2.85 1.71 1.75" size=".41 .02 .66" material="window" contype="0" conaffinity="0" />
+    <geom type="box" pos="2.85 1.675 1.75" size=".016 .025 .67" material="metal" contype="0" conaffinity="0" />
+    <geom name="storage" type="box" pos="3.7 1.32 .48" size=".60 .40 .48" material="sage" />
+    <geom name="storage_top" type="box" pos="3.7 1.32 .975" size=".63 .43 .025" material="oak" />
+    <geom name="ceiling_panel" type="box" pos="1.2 .2 2.85" size="3.5 1.75 .06" material="ceiling" />
+    <geom type="box" pos="-1.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="-0.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="0.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="1.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="2.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <geom type="box" pos="3.5 .2 2.775" size=".012 1.75 .018" material="metal" contype="0" conaffinity="0" />
+    <light name="daylight" pos="-.5 -2.8 4.0" dir=".2 .5 -1" directional="true" diffuse=".85 .89 .93" ambient=".13 .14 .15" castshadow="true" />
+    <light name="warm_fill" pos="3 1.2 2.5" dir="-.5 -.4 -1" diffuse=".45 .39 .30" castshadow="false" />
+    <light name="interior_fill" pos="-.8 -1.1 2.35" dir=".2 .2 -.7" diffuse=".7 .68 .60" ambient=".08 .08 .08" castshadow="false" />
+    <body name="loose_fixture" pos="1.73 0 2.13" quat=".7071067811865476 0 0 .7071067811865476">
+      <freejoint name="fixture_free" />
+      <inertial pos="0 0 0" mass="3.2" diaginertia=".057 .28 .30" />
+      <geom name="fixture_housing" type="box" size=".58 .23 .038" material="fixture_bronze" />
+      <geom name="fixture_luminous_face" type="box" pos="0 0 -.044" size=".53 .19 .013" material="diffuser" mass="0" contype="0" conaffinity="0" />
+      <geom type="box" pos="0 -0.223 0" size=".59 .010 .045" material="metal" mass="0" contype="0" conaffinity="0" />
+      <geom type="box" pos="0 0.223 0" size=".59 .010 .045" material="metal" mass="0" contype="0" conaffinity="0" />
+      <geom type="box" pos="-0.578 0 0" size=".010 .23 .045" material="metal" mass="0" contype="0" conaffinity="0" />
+      <geom type="box" pos="0.578 0 0" size=".010 .23 .045" material="metal" mass="0" contype="0" conaffinity="0" />
+      <site name="left_panel_anchor" pos="-0.49 0.0 0.04" size=".005" rgba="0 0 0 0" />
+      <site name="right_panel_anchor" pos="0.49 0.0 0.04" size=".005" rgba="0 0 0 0" />
+    </body>
+    <camera name="scene_preview" pos="-2.5 -3.6 1.7" xyaxes="0.7474093186836597 -0.6643638388299198 0.0 0.065880573607152 0.07411564530804599 0.9950711638580251" fovy="54" />
+    <geom name="left_mount" type="cylinder" pos="1.73 -0.49 2.73" size=".065 .035" material="metal" />
+    <site name="left_ceiling_anchor" pos="1.73 -0.49 2.73" size=".005" rgba="0 0 0 0" />
+    <geom name="left_remaining_wire_stub" type="capsule" fromto="1.73 -0.49 2.71 1.73 -0.49 2.58" size=".008" material="graphite" contype="0" conaffinity="0" />
+    <geom name="right_mount" type="cylinder" pos="1.73 0.49 2.73" size=".065 .035" material="metal" />
+    <site name="right_ceiling_anchor" pos="1.73 0.49 2.73" size=".005" rgba="0 0 0 0" />
+    <geom name="right_remaining_wire_stub" type="capsule" fromto="1.73 0.49 2.71 1.73 0.49 2.58" size=".008" material="graphite" contype="0" conaffinity="0" />
+  </worldbody>
+  <equality>
+    <connect name="left_attachment" body1="loose_fixture" anchor="-0.49 0.0 0.6" solref=".004 1" solimp=".95 .99 .001" />
+    <connect name="right_attachment" body1="loose_fixture" anchor="0.49 0.0 0.6" solref=".004 1" solimp=".95 .99 .001" />
+  </equality>
+  <tendon>
+    <spatial name="left_suspension_wire" width=".008" rgba=".11 .13 .14 1">
+      <site site="left_ceiling_anchor" />
+      <site site="left_panel_anchor" />
+    </spatial>
+    <spatial name="right_suspension_wire" width=".008" rgba=".11 .13 .14 1">
+      <site site="right_ceiling_anchor" />
+      <site site="right_panel_anchor" />
+    </spatial>
+  </tendon>
+</mujoco>

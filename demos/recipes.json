@@ -1,0 +1,108 @@
+{
+  "pss/ceiling-a": {
+    "case": "ceiling-a",
+    "method": "pss_uncalibrated",
+    "navigation_profile": "demo-ground-truth",
+    "demo_margin_m": 0.2
+  },
+  "pss/ceiling-b": {
+    "case": "ceiling-b",
+    "method": "pss_uncalibrated",
+    "navigation_profile": "demo-ground-truth",
+    "demo_margin_m": 0.2
+  },
+  "pss/ceiling-c": {
+    "case": "ceiling-c",
+    "method": "pss_uncalibrated",
+    "navigation_profile": "demo-ground-truth",
+    "demo_margin_m": 0.2
+  },
+  "pss/dominos-a": {
+    "case": "dominos-a",
+    "method": "pss_uncalibrated",
+    "navigation_profile": "demo-ground-truth",
+    "demo_margin_m": 0.2
+  },
+  "pss/dominos-b": {
+    "case": "dominos-b",
+    "method": "pss_uncalibrated",
+    "navigation_profile": "demo-ground-truth",
+    "demo_margin_m": 0.2
+  },
+  "pss/dominos-c": {
+    "case": "dominos-c",
+    "method": "pss_uncalibrated",
+    "navigation_profile": "demo-ground-truth",
+    "demo_margin_m": 0.2
+  },
+  "pss/stack-a": {
+    "case": "stack-a",
+    "method": "pss_uncalibrated",
+    "navigation_profile": "demo-ground-truth",
+    "demo_margin_m": 0.2
+  },
+  "pss/stack-b": {
+    "case": "stack-b",
+    "method": "pss_uncalibrated",
+    "navigation_profile": "demo-ground-truth",
+    "demo_margin_m": 0.2
+  },
+  "pss/stack-c": {
+    "case": "stack-c",
+    "method": "pss_uncalibrated",
+    "navigation_profile": "demo-ground-truth",
+    "demo_margin_m": 0.2
+  },
+  "plain_cbf/ceiling-a": {
+    "case": "ceiling-a",
+    "method": "plain_cbf",
+    "demo_baseline": true
+  },
+  "plain_cbf/dominos-c": {
+    "case": "dominos-c",
+    "method": "plain_cbf",
+    "demo_baseline": true
+  },
+  "plain_cbf/stack-b": {
+    "case": "stack-b",
+    "method": "plain_cbf",
+    "demo_baseline": true
+  },
+  "backup_cbf/ceiling-a": {
+    "case": "ceiling-a",
+    "method": "backup_cbf",
+    "demo_baseline": true
+  },
+  "backup_cbf/dominos-c": {
+    "case": "dominos-c",
+    "method": "backup_cbf",
+    "demo_baseline": true
+  },
+  "backup_cbf/stack-b": {
+    "case": "stack-b",
+    "method": "backup_cbf",
+    "demo_baseline": true
+  },
+  "omnivla/ceiling": {
+    "case": "ceiling-omnivla",
+    "method": "omnivla"
+  },
+  "omnivla/dominos": {
+    "case": "dominos-omnivla",
+    "method": "omnivla"
+  },
+  "omnivla/stack": {
+    "case": "stack-omnivla",
+    "method": "omnivla"
+  },
+  "active/on": {
+    "case": "active-avoidance",
+    "method": "on",
+    "duration": 42.0
+  },
+  "active/off": {
+    "case": "active-avoidance",
+    "method": "off",
+    "duration": 10.0
+  }
+}
